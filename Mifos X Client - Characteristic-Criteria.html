@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="https://localhost/images/favicon.ico">
+    <title class="ng-binding">Mifos X Client</title>
+    <style>[data-ng-cloak] {
+        display: none !important;
+    }</style>
+    <link href="Mifos%20X%20Client_files/styles.html" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="loader.dd00179c" src="Mifos%20X%20Client_files/loader.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mifosXComponents.7927677d" src="Mifos%20X%20Client_files/mifosXComponents.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mifosXStyles.c890f0a1" src="Mifos%20X%20Client_files/mifosXStyles.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="Mifos%20X%20Client_files/underscore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="Mifos%20X%20Client_files/jquery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angularFileUploadShim" src="Mifos%20X%20Client_files/ng-file-upload-shim.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="d3" src="Mifos%20X%20Client_files/d3.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="css/css" src="Mifos%20X%20Client_files/css.js"></script><link type="text/css" rel="stylesheet" href="Mifos%20X%20Client_files/fontawesome.css"><link type="text/css" rel="stylesheet" href="Mifos%20X%20Client_files/styles.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ckEditor" src="Mifos%20X%20Client_files/ckeditor.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="chosen.jquery.min" src="Mifos%20X%20Client_files/chosen.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular" src="Mifos%20X%20Client_files/angular.js"></script><style>.cke{visibility:hidden;}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nvd3" src="Mifos%20X%20Client_files/nv.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Q" src="Mifos%20X%20Client_files/q.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-route" src="Mifos%20X%20Client_files/angular-route.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-resource" src="Mifos%20X%20Client_files/angular-resource.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-translate" src="Mifos%20X%20Client_files/angular-translate.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angularui" src="Mifos%20X%20Client_files/ui-bootstrap.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="webstorage" src="Mifos%20X%20Client_files/angular-webstorage.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="notificationWidget" src="Mifos%20X%20Client_files/notificationWidget.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angularFileUpload" src="Mifos%20X%20Client_files/ng-file-upload.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="modified.datepicker" src="Mifos%20X%20Client_files/datepicker.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ngSanitize" src="Mifos%20X%20Client_files/angular-sanitize.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ngIdle" src="Mifos%20X%20Client_files/angular-idle.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="configurations" src="Mifos%20X%20Client_files/configurations.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="LocalStorageModule" src="Mifos%20X%20Client_files/localstorage.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ngCsv" src="Mifos%20X%20Client_files/csv.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="frAngular" src="Mifos%20X%20Client_files/KeyboardManager.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="tmh.dynamicLocale" src="Mifos%20X%20Client_files/tmhDynamicLocale.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-wizard" src="Mifos%20X%20Client_files/angular-wizard.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="webcam-directive" src="Mifos%20X%20Client_files/webcam.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-utils-pagination" src="Mifos%20X%20Client_files/dirPagination.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ng-scrollbar" src="Mifos%20X%20Client_files/ng-scrollbar.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nvd3ChartDirectives" src="Mifos%20X%20Client_files/angularjs-nvd3-directives.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angularuitpls" src="Mifos%20X%20Client_files/ui-bootstrap-tpls.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-translate-loader-static-files" src="Mifos%20X%20Client_files/angular-translate-loader-static-files.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mifosX" src="Mifos%20X%20Client_files/mifosX.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="routes-initialTasks-webstorage-configuration.d2afc681" src="Mifos%20X%20Client_files/routes-initialTasks-webstorage-configuration.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/models.8900597f" src="Mifos%20X%20Client_files/models.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/ResourceFactoryProvider" src="Mifos%20X%20Client_files/ResourceFactoryProvider.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/HttpServiceProvider" src="Mifos%20X%20Client_files/HttpServiceProvider.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/AuthenticationService" src="Mifos%20X%20Client_files/AuthenticationService.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/SessionManager" src="Mifos%20X%20Client_files/SessionManager.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/Paginator" src="Mifos%20X%20Client_files/Paginator.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/UIConfigService" src="Mifos%20X%20Client_files/UIConfigService.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/NotificationResponseHeaderProvider" src="Mifos%20X%20Client_files/NotificationResponseHeaderProvider.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/controllers.85405de5" src="Mifos%20X%20Client_files/controllers.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="filters/filters.61c17440" src="Mifos%20X%20Client_files/filters.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="directives/directives.9ddc8aa2" src="Mifos%20X%20Client_files/directives.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="test/testInitializer" src="Mifos%20X%20Client_files/testInitializer.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="test/demoTest" src="Mifos%20X%20Client_files/demoTest.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="test/scenarioTest" src="Mifos%20X%20Client_files/scenarioTest.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-mocks" src="Mifos%20X%20Client_files/angular-mocks.js">
+    
+function AddRow() 
+{
+    var table = document.getElementById("Criteria");
+    var row = table.insertRow(3);
+    var cell1 = row.insertCell(3);
+    var cell2 = row.insertCell(4);
+    cell1.innerHTML = "Crit";
+    cell2.innerHTML = "Val";
+}
+
+</script></head>
+<body class="preview whitebg ng-scope" id="top" data-spy="scroll" data-target=".subnav" data-offset="80" data-ng-controller="MainController">
+
+<!--Loader -->
+<div id="loaderWrapper" data-ng-hide="domReady" style="position: absolute; height: 100%; width: 100%; top: 0;" class="ng-hide">
+    <div id="loader" style="margin: 175px auto">
+        <img src="Mifos%20X%20Client_files/MifosX_logo.png" alt="MifosX" style="min-width: 50px;   width: 6%; margin: 0 auto" class="img-responsive">
+        <img src="Mifos%20X%20Client_files/loader.gif" style="margin: 10px auto" class="img-responsive">
+    </div>
+</div>
+
+<div data-ng-hide="!domReady">
+    <!-- Login Form  -->
+    <div class="container ng-scope ng-hide" style="margin-top:10vh;" data-ng-hide="currentSession.user != null" data-ng-controller="LoginFormController">
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="pull-right  ng-binding">
+                    Change language:
+                    <div class="btn-group dropdown" uib-dropdown="">
+                        <button type="button" class="btn btn-default btn-xs ng-binding dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
+                            English <span class="caret"></span>
+                        </button>
+                        <ul class="lang-dropdown dropdown-menu" uib-dropdown-menu="">
+                            <!-- ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">English</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">Français</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">Español</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">Português</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">中文</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">हिंदी</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">ქართული</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">ພາສາລາວ</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">tiếng Việt</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">မြန်မာ</a>
+                            </li><!-- end ngRepeat: lang in langs --><li ng-repeat="lang in langs" class="ng-scope">
+                                <a href="" ng-click="changeLang(lang, $event)" class="ng-binding">ဇော်ဂျီ</a>
+                            </li><!-- end ngRepeat: lang in langs -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div ng-show="resetPassword" class="ng-hide">
+                    <form class="form-inline pull-right ng-pristine ng-invalid ng-invalid-required" role="form">
+                        <label><strong class="ng-binding">Your password is expired, please reset your password</strong></label>
+
+                        <div class="form-group">
+                            <input data-ng-model="passwordDetails.password" placeholder="Password" class="input-sm form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required="" id="password" type="password">
+                        </div>
+                        <div class="form-group">
+                            <input data-ng-model="passwordDetails.repeatPassword" placeholder="Repeat password" class="input-sm form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required="" id="repeatPassword" type="password">
+                        </div>
+                        <button class="btn btn-success ng-binding" type="submit" data-ng-click="updatePassword()" id="updatepassword-button">Reset Password
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4 text-center">
+                        <img src="Mifos%20X%20Client_files/mifos-logo-flat.png" alt="Mifos X" style="width:80%; margin:auto;" class=" text-center img-responsive">
+                    </div>
+                </div>
+                <hr>
+
+                <div data-ng-form="loginForm" class="ng-dirty ng-valid-parse ng-submitted ng-invalid ng-invalid-required">
+
+                    <div class="row" ng-hide="resetPassword || twoFactorRequired">
+                        <div class="col-sm-4 col-sm-offset-4">
+
+                            <div class="alert alert-danger ng-binding ng-hide" ng-show="authenticationFailed">
+                                
+                            </div>
+
+                            <form class="form ng-dirty ng-valid-parse ng-submitted ng-invalid ng-invalid-required">
+
+                                <div class="form-group">
+                                    <label for="uid">USERNAME</label>
+                                    <input name="username" id="uid" class="form-control ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" ng-model="loginCredentials.username" placeholder="username" required="" value="mifos" type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pwd">PASSWORD</label>
+                                    <input name="password" id="pwd" class="form-control ng-untouched ng-dirty ng-empty ng-invalid ng-invalid-required" ng-model="loginCredentials.password" autocomplete="new-password" placeholder="password" required="" type="password">
+                                </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-block btn-primary ng-binding" type="submit" data-ng-show="!load" data-ng-click="login()" id="login-button">
+                                        Sign In
+                                    </button>
+                                    <button class="btn btn-block btn-primary ng-hide" type="submit" data-ng-show="load">
+                                        <img data-ng-src="images/ring.svg" alt="" src="Mifos%20X%20Client_files/ring.svg"> <b>loading...</b>
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="row ng-hide" ng-show="twoFactorRequired &amp;&amp; !otpRequested">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <h4 class="ng-binding">Two-Factor Authentication</h4>
+                                <hr>
+
+                                <p class="ng-binding">Please select how you would like to receive an authentication token.</p>
+                                <form class="form ng-pristine ng-valid">
+                                    <div class="form-group">
+                                        <!-- ngRepeat: deliveryMethod in twoFactorDeliveryMethods -->
+                                        <div class="checkbox form-group">
+                                            <label for="twofactorRememberMe" class="ng-binding">
+                                                <input id="twofactorRememberMe" name="twofactorRememberMe" ng-model="twofactorRememberMe" class="ng-pristine ng-untouched ng-valid ng-empty" type="checkbox">
+                                                Remember this computer
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-block btn-primary ng-binding" type="submit" data-ng-show="!load" data-ng-click="requestOTP()" id="otp-request-button">
+                                            Request token
+                                        </button>
+                                        <button class="btn btn-block btn-primary ng-hide" type="submit" data-ng-show="load">
+                                            <img data-ng-src="images/ring.svg" alt="" src="Mifos%20X%20Client_files/ring.svg"> <b>loading...</b>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                    </div>
+
+                    <div class="row ng-hide" ng-show="otpRequested">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <hr>
+                            <h4 class="ng-binding">Two-Factor Authentication</h4>
+                            <p class="ng-binding">
+                                Please enter the authentication token you received.
+                            </p>
+
+                            <div class="alert alert-danger ng-binding ng-hide" ng-show="otpTokenError">
+                                
+                            </div>
+
+                            <form class="form ng-pristine ng-valid">
+                                <div class="form-group">
+                                    <label for="otpToken" class="ng-binding">Authentication token</label>
+                                    <input id="otpToken" name="otpDeliveryMethods" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="otpToken" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-block btn-primary ng-binding" type="submit" data-ng-show="!load" data-ng-click="validateOTP()" id="otp-verify-button">
+                                        Sign In
+                                    </button>
+                                    <button class="btn btn-block btn-primary ng-hide" type="submit" data-ng-show="load">
+                                        <img data-ng-src="images/ring.svg" alt="" src="Mifos%20X%20Client_files/ring.svg"> <b>loading...</b>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-xs-4 text-center">
+
+                        <ul class="list-unstyled">
+                            <li><h5>RESOURCES</h5></li>
+                            <li><a target="https://mifosforge.jira.com/wiki/display/MIFOS/User+Manual" href="https://mifosforge.jira.com/wiki/display/MIFOS/User+Manual" class="ng-binding">User Manual</a></li>
+                            <li><a target="https://mifosforge.jira.com/wiki/pages/viewpage.action?pageId=14712842" href="https://mifosforge.jira.com/wiki/pages/viewpage.action?pageId=14712842" class="ng-binding">Functional Specifications</a></li>
+                            <li><a href="https://mifosforge.jira.com/wiki/display/MDZ/Welcome+in+the+Zone" class="ng-binding">Developer Zone</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <ul class="list-unstyled">
+                            <li><h5>COMMUNITY</h5></li>
+                            <li><a target="https://groups.google.com/forum/#!forum/mifosusers" href="https://groups.google.com/forum/#!forum/mifosusers" class="ng-binding">User Group</a></li>
+                            <li><a target="https://groups.google.com/forum/#!forum/mifosdeveloper" href="https://groups.google.com/forum/#!forum/mifosdeveloper" class="ng-binding">Developer Group</a></li>
+                            <li><a target="http://mifos.org/resources/community/communications/#mifos-irc" href="http://mifos.org/community/communications/mifos-irc" class="ng-binding">IRC</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <ul class="list-unstyled">
+                            <li><h5>CONTRIBUTE</h5></li>
+                            <li><a target="https://mifosforge.jira.com/wiki/display/MDZ/Key+Design+Principles" href="https://mifosforge.jira.com/wiki/display/MDZ/Key+Design+Principles/" class="ng-binding">Key design principles</a></li>
+                            <li><a target="https://mifosforge.jira.com/wiki/display/MDZ/Working+with+Code" href="http://sourceforge.net/projects/mifos/" class="ng-binding">Working with code</a></li>
+                            <li><a target="http://mifos.org/donate/" href="http://mifos.org/donate/" class="ng-binding">Donate</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 text-center">
+                        <br>
+
+                        <p class=" text-muted"><span ng-bind-html="text" class="ng-binding"><span>Mifos X is designed by the <a href="http://www.openmf.org/">Mifos Initiative</a>.<a href="http://mifos.org/resources/community/"> A global community </a>
+ that aims to speed the elimination of poverty by enabling Organizations
+ to more effectively and efficiently deliver responsible financial 
+services to the world’s poor and unbanked </span><br><span>Sounds interesting?<a href="http://mifos.org/take-action/volunteer/"> Get involved!</a></span></span>
+                            <br>
+                            <span style=" display: inline-block; margin:auto;min-width:40px; border-bottom:2px solid #e0e0e0;">&nbsp;</span>
+                        </p>
+
+                    </div>
+                </div>
+                <p class="text-center text-muted small">
+                    <span class="ng-binding">Version 18.03.01.RELEASE</span>
+                    <br> <span class="ng-binding">Mifos X is up to date</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div ng-class="{fullscreen:true ,blockui:blockUI==true}" id="main" data-ng-hide="currentSession.user == null" class="fullscreen">
+        <div class="loading-widget-div ng-hide" data-ng-show="blockUI">
+            <!-- TODO : insert loader here-->
+             <span class="centerloader">
+                <img src="Mifos%20X%20Client_files/833.svg" class="img-responsive">
+            </span>
+            <!--<div style="margin: 175px auto">
+            </div>-->
+        </div>
+
+        <div id="mifos-reskin-ui-container">
+            <!-- ngInclude: 'views/_topnavbar.html' --><div id="mifos-reskin-header-nav" ng-include="'views/_topnavbar.html'" class="ng-scope"><nav class="navbar navbar-default navbar-fixed-top ng-scope" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" ng-click="isNavCollapsed = !isNavCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="" id="leftnav-toggle">
+                <span class="fa fa-bars"></span>
+            </a>
+            <a class="navbar-brand" href="#/home">
+                <img src="Mifos%20X%20Client_files/mifos-logo-flat.png" alt="Mifos X">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" uib-collapse="!isNavCollapsed" style="height: 0px;" aria-expanded="false" aria-hidden="true">
+            <ul class="nav navbar-nav" id="main-menu-left">
+                <li class="dropdown" uib-dropdown="" is-open="li.client.status.isopen" ng-mouseenter="li.client.status.isopen = true" ng-mouseleave="li.client.status.isopen = false">
+                    <a class="ng-binding dropdown-toggle" uib-dropdown-toggle="" data-toggle="uib-dropdown" ng-class="{ activate: isActive('clients') }" href="" aria-haspopup="true" aria-expanded="false">
+                       <i class="fa fa-users"></i> Clients<b class="caret"></b></a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="" id="swatch-menu">
+                        <li><a href="#/clients" has-permission="READ_CLIENT" class="ng-binding">Clients</a></li>
+                        <li><a href="#/groups" has-permission="READ_GROUP" class="ng-binding">Groups</a></li>
+                        <li><a href="#/centers" has-permission="READ_CENTER" class="ng-binding">Centers</a></li>
+                    </ul>
+                </li>
+                <li uib-dropdown="" is-open="li.accounting.status.isopen" ng-mouseenter="li.accounting.status.isopen = true" ng-mouseleave="li.accounting.status.isopen = false" class="dropdown">
+                    <a ng-class="{ activate: isActive('acc') }" href="#/accounting" class="ng-binding">
+                        <i class="fa fa-money"></i> Accounting
+                    </a>
+                </li>
+                <li class="dropdown" uib-dropdown="" id="reports-menu" is-open="li.reports.status.isopen" ng-mouseenter="li.reports.status.isopen = true" ng-mouseleave="li.reports.status.isopen = false">
+                    <a class="ng-binding dropdown-toggle" uib-dropdown-toggle="" data-toggle="uib-dropdown" ng-class="{ activate: isActive('rep') }" href="" aria-haspopup="true" aria-expanded="false">
+                       <i class="fa fa-bar-chart-o"></i> Reports<b class="caret"></b></a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="">
+                        <li><a href="#/reports/all" has-permission="READ_REPORT" class="ng-binding">All</a></li>
+                        <li><a href="#/reports/clients" has-permission="READ_REPORT" class="ng-binding">Clients</a></li>
+                        <li><a href="#/reports/loans" has-permission="READ_REPORT" class="ng-binding">Loans</a></li>
+                        <li><a href="#/reports/savings" has-permission="READ_REPORT" class="ng-binding">Savings</a></li>
+                        <li><a href="#/reports/funds" has-permission="READ_REPORT" class="ng-binding">Funds</a></li>
+                        <li><a href="#/reports/accounting" has-permission="READ_REPORT" class="ng-binding">Accounting</a></li>
+                        <li><a href="#/xbrl" has-permission="READ_REPORT" class="ng-binding">XBRL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" uib-dropdown="" id="preview-menu" is-open="li.admin.status.isopen" ng-mouseenter="li.admin.status.isopen = true" ng-mouseleave="li.admin.status.isopen = false">
+                    <a class="ng-binding dropdown-toggle" uib-dropdown-toggle="" data-toggle="uib-dropdown" ng-class="{ activate: isActive('admin') }" href="" aria-haspopup="true" aria-expanded="false">
+                       <i class="fa fa-wrench"></i> Admin<b class="caret"></b></a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="">
+                        <li><a href="#/users" has-permission="READ_USER" class="ng-binding">Users</a>
+                        </li>
+                        <li><a href="#/organization" class="ng-binding">Organization</a></li>
+                        <li><a href="#/system" class="ng-binding">System</a></li>
+                        <li><a href="#/products" class="ng-binding">Products</a></li>
+                        <li><a href="#/templates" has-permission="READ_TEMPLATE" class="ng-binding">Templates</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="main-menu-right">
+                <li class="ng-scope dropdown" uib-dropdown="" id="notification-icon" ng-controller="NotificationsController" is-open="li.notif.status.isopen" ng-mouseenter="li.notif.status.isopen = true" ng-mouseleave="li.notif.status.isopen = false">
+                    <a href="" class="dropdown-toggle" uib-dropdown-toggle="" data-toggle="uib-dropdown" ng-click="fetchItemsInNotificationTray()" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-bell"></span>
+                    </a>
+                    <div class="numberCircle ng-binding ng-hide" ng-hide="numberOfUnreadNotifications == 0">0</div>
+                    <ul class="notification-container dropdown-menu" uib-dropdown-menu="">
+                        <!-- ngRepeat: notification in notifications -->
+                        <li class="notification-list-link">
+                            <a href="#/notifications">Show all notifications</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" uib-dropdown="" id="user-menu" is-open="li.user.status.isopen" ng-mouseenter="li.user.status.isopen = true" ng-mouseleave="li.user.status.isopen = false">
+                    <a id="user-dropdown" class="ng-binding dropdown-toggle" uib-dropdown-toggle="" data-toggle="uib-dropdown" href="" aria-haspopup="true" aria-expanded="false">
+                        mifos<b class="caret"></b></a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="">
+                        <li><a id="help" ng-click="helpf()" class="ng-binding"><i class="fa fa-question-circle"></i> Help</a></li>
+                        <li><a href="#/profile" class="ng-binding"><i class="fa fa-user"></i> Profile</a></li>
+                        <li><a href="#/usersetting" class="ng-binding"><i class="fa fa-cog"></i> Settings</a></li>
+                        <li><a id="logout" data-ng-click="logout()" class="ng-binding"><i class="fa fa-power-off"></i> Sign Out</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <form ng-submit="search()" class="navbar-form navbar-right ng-pristine ng-valid">
+                <div class="input-group pull-left">
+                    <input id="search" class="form-control input-sm unstyled ng-pristine ng-untouched ng-valid ng-empty" style="width:250px;" data-ng-model="search.query" placeholder="Click or press alt+x to Search" type="text">
+                    <div class="input-group-btn search-panel dropdown" uib-dropdown="">
+                        <button type="button" class="btn btn-default btn-sm  ng-binding dropdown-toggle" uib-dropdown-toggle="" data-toggle="uib-dropdown" aria-haspopup="true" aria-expanded="false">
+                            All &nbsp;<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" uib-dropdown-menu="">
+                            <!-- ngRepeat: searchScope in searchScopes --><li uib-dropdown="" ng-repeat=" searchScope in searchScopes" ng-click="changeScope(searchScope)" class="ng-scope dropdown">
+                                <a href="" class="ng-binding">All</a>
+                            </li><!-- end ngRepeat: searchScope in searchScopes --><li uib-dropdown="" ng-repeat=" searchScope in searchScopes" ng-click="changeScope(searchScope)" class="ng-scope dropdown">
+                                <a href="" class="ng-binding">Clients</a>
+                            </li><!-- end ngRepeat: searchScope in searchScopes --><li uib-dropdown="" ng-repeat=" searchScope in searchScopes" ng-click="changeScope(searchScope)" class="ng-scope dropdown">
+                                <a href="" class="ng-binding">Groups</a>
+                            </li><!-- end ngRepeat: searchScope in searchScopes --><li uib-dropdown="" ng-repeat=" searchScope in searchScopes" ng-click="changeScope(searchScope)" class="ng-scope dropdown">
+                                <a href="" class="ng-binding">Savings</a>
+                            </li><!-- end ngRepeat: searchScope in searchScopes --><li uib-dropdown="" ng-repeat=" searchScope in searchScopes" ng-click="changeScope(searchScope)" class="ng-scope dropdown">
+                                <a href="" class="ng-binding">Loans</a>
+                            </li><!-- end ngRepeat: searchScope in searchScopes --><li uib-dropdown="" ng-repeat=" searchScope in searchScopes" ng-click="changeScope(searchScope)" class="ng-scope dropdown">
+                                <a href="" class="ng-binding">Shares</a>
+                            </li><!-- end ngRepeat: searchScope in searchScopes -->
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav></div>
+
+            <div id="mifos-reskin-body-container" style="background-color: #ebeff1">
+                <div id="mifos-reskin-side-nav" ng-scrollbar="" class="ng-isolate-scope" style="overflow: hidden;"><div class="ngsb-wrap" style="position: relative; overflow: hidden; max-width: 100%; height: 523px;"><div class="ngsb-container" ng-transclude="" style="position: relative; top: 0px; overflow: hidden;">
+                    <div class="left-nav ng-scope">
+                        <ul>
+                            <li>
+                                <a class="black" href="#/help">
+                                    <i class="fa fa-keyboard-o"></i>
+                                    <span class="ng-binding">Keyboard Shortcuts</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/nav/offices">
+                                    <i class="fa fa-compass "></i>
+                                    <span class="ng-binding">Navigation</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/tasks">
+                                    <i class="fa fa-check "></i>
+                                    <span class="ng-binding">Checker Inbox &amp; Tasks</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/entercollectionsheet">
+                                    <i class="fa fa-tasks "></i>
+                                    <span class="ng-binding">Collection sheet</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/individualcollectionsheet">
+                                    <i class="fa fa-tasks "></i>
+                                    <span class="ng-binding">Individual Collection Sheet</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/freqposting">
+                                    <i class="fa fa-repeat "></i>
+                                    <span class="ng-binding">Frequent Postings</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/journalentry">
+                                    <i class="fa fa-plus "></i>
+                                    <span class="ng-binding">Add Journal Entries</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/accounts_closure">
+                                    <i class="fa fa-folder "></i>
+                                    <span class="ng-binding">Closing Entries</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/accounting_coa">
+                                    <i class="fa fa-sitemap "></i>
+                                    <span class="ng-binding">Chart of Accounts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="black" href="#/notifications">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="ng-binding">Notifications</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="black" href="#/createclient">
+                                    <i class="fa fa-user "></i>+ <span class="ng-binding">Client</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/creategroup">
+                                    <i class="fa fa-group "></i>+ <span class="ng-binding">Group</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" href="#/createcenter">
+                                <i class="fa fa-map-marker "></i>+ <span class="ng-binding">Center</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="black" ng-click="helpf()">
+                                    <i class="fa fa-question-circle"></i>
+                                    <span class="ng-binding">Help</span> &nbsp; <i class="fa fa-external-link"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div><div class="ngsb-scrollbar" style="position: absolute; display: block;" ng-show="showYScrollbar"><div class="ngsb-thumb-container"><div class="ngsb-thumb-pos" oncontextmenu="return false;" style="position: absolute; height: 485px; top: 0px;"><div class="ngsb-thumb" style="position: relative; line-height: 485px;"></div></div><div class="ngsb-track"></div></div></div></div></div>
+            </div>
+            <div id="mifos-reskin-body-view">
+                <!-- ngView:  --><div class="ng-scope" ng-view=""><div class="ng-scope" data-ng-switch="currentSession.user != null">
+    <!-- ngSwitchWhen: true --><div class="ng-scope" data-ng-switch-when="true">
+        <!-- ngInclude: 'views/private/home_' + currentSession.user.getHomePageIdentifier() + '.html' --><div data-ng-include="'views/private/home_' + currentSession.user.getHomePageIdentifier() + '.html'" class="ng-scope"><div class="content-container ng-scope">
+<!- start changes... ->
+<!-- 
+<div class="card well ng-scope" id="expertsearch" data-ng-controller="ExpertSearchController">
+
+
+
+    <h3 class="paddedleft"><strong class="ng-binding">Welcome, mifos</strong>
+    	<div class="btn-group pull-right">
+	        <label class="btn btn-primary ng-pristine ng-untouched ng-valid ng-binding ng-not-empty" ng-model="dashModel" btn-radio="'dashboard'">Home</label>
+	        <label class="btn btn-primary ng-pristine ng-untouched ng-valid ng-binding ng-not-empty" ng-click="switch()" ng-model="dashModel" btn-radio="'rich-dashboard'">Dashboard</label>
+	    </div>
+    </h3>
+    <hr>
+    <input id="expert" data-ng-model="formData.search" placeholder="Search activities" class="col-md-4 form-control ng-pristine ng-valid ng-empty ng-touched" typeahead-on-select="search()" ng-autofocus="true" uib-typeahead="param as param for param in searchParams | filter:$viewValue | limitTo:8" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-90-5593" type="text"><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-90-5593" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
+  -->
+
+    <!-- ngRepeat: match in matches track by $index -->
+<!--
+</ul>
+    <div id="home" class="row">
+    	<div class="col-md-8 ng-binding">
+    		<h3 class="ng-binding">You can navigate your way through MifosX using: </h3>
+			<i class="fa fa-arrow-left"></i>the shortcuts to the left &nbsp;&nbsp;
+			<i class="fa fa-arrow-up"></i>the menu at the top &nbsp;&nbsp;
+			<i class="fa fa-arrow-up top-right"></i>the search tool at the top-right
+    	</div>
+	    <div class="col-md-6 col-md-offset-3">
+	-->
+
+    		<!-- ngIf: !isLargeLogoPath -->
+            <!-- <img src="Mifos%20X%20Client_files/mifos_lg-logo.jpg" alt="MifosX" class="img-responsive ng-scope" ng-if="!isLargeLogoPath"> --> <!-- end ngIf: !isLargeLogoPath -->
+			<!-- ngIf: isLargeLogoPath -->
+            <!--
+	    </div>
+    </div>
+</div>
+</div></div>
+-->
+<!--
+    </div> --> <!-- end ngSwitchWhen: -->
+    <!-- ngSwitchDefault:  -->
+<!-- &nbsp; -->
+        Data Source : &nbsp;        
+        <input type="radio" name="Datasource" value="XML" checked> XML &nbsp;&nbsp; 
+        <input type="radio" name="Datasource" value="JSON"> JSON &nbsp;&nbsp;
+        <input type="radio" name="Datasource" value="SQL"> SQL &nbsp;&nbsp;
+        <BR>
+        <BR>
+        SQL/API : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <textarea rows="2" cols="40" align="left-top">
+        SELECT (SYSDATE() - DOB) as "Age" from person_details where ?Request = ?
+        </textarea>
+        <BR>
+        <BR>
+        Key : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" size="43" name="Request" value="">
+        <BR>
+        <BR>
+        Statistical Criteria :   <input type="checkbox" name="Status" value="Active"> 
+        <BR>     
+        <BR>
+        <table id="Criteria" border="1">
+            <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Criteria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+        </table>
+        <BR>
+        <button onclick="AddRow()">Add Row</button>
+        <BR>
+        <BR>
+         <input type="button" onclick="alert('Get Criteria!')" value="Get"> 
+         <input type="button" onclick="alert('Added Criteria!')" value="Add"> 
+         <input type="button" onclick="alert('Updated Criteria!')" value="Update"> 
+</div>
+</div>
+                <!-- Footer -->
+                <br><br>
+                <footer>
+                    <p align="center"><a href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel" target="_blank" class="ng-binding"> Release Version:  18.XX.XX.RELEASE | Mifos X Release Date:  14/Aug/2018 </a></p>
+                </footer>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Le javascript -->
+<script type="text/javascript" data-main="scripts/loader.dd00179c.js" src="Mifos%20X%20Client_files/require.js"></script>
+
+
+</body></html>
